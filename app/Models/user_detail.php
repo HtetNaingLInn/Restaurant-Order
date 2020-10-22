@@ -2,20 +2,14 @@
 
 namespace App\Models;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Role extends Model
+class user_detail extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $fillable = ['name'];
+    protected $fillable = ['user_id', 'phone', 'nrc', 'age', 'salary', 'address', 'remark'];
     protected $dates = ['deleted_at'];
-
-    public function user()
-    {
-        return $this->hasMany(User::class);
-    }
 }

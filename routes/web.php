@@ -39,5 +39,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin', 'middleware' => 'auth
     Route::get('role/{id}/delete', 'RoleController@destroy')->name('role.destroy');
 
     Route::get('user', 'UserController@index')->name('user.index');
+    Route::get('user/create', 'UserController@create')->name('user.create');
+    Route::post('user', 'UserController@store')->name('user.store');
+    Route::get('user/{id}/edit', 'UserController@edit')->name('user.edit');
+    Route::post('user/{id}', 'UserController@update')->name('user.update');
+    Route::get('user/{id}/delete', 'UserController@destroy')->name('user.destroy');
+    Route::get('user/role/{id}', 'UserController@category')->name('user.role');
+    Route::get('user/{id}/show', 'UserController@show')->name('user.show');
 
 });

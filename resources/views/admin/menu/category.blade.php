@@ -72,7 +72,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                            <span class="text-bold text-danger">{{$category->name}}</span>
+                            <span class="text-bold text-info">{{$category->name}}</span>
 
                             </div>
                             <div class="card-body">
@@ -96,12 +96,13 @@
                                       <td>{{$menu->name}}</td>
                                       <td>{{$menu->price}}</td>
                                       <td>
+                                        <a href="{{Route('menu.edit',$menu->id)}}">
+                                            <button class="btn btn-info btn-sm mr-2"><i class="fas fa-edit"></i></button>
+                                              </a>
                                         <a href="{{Route('menu.destroy',$menu->id)}}">
-                                        <button class="btn btn-info btn-sm swalDefaultInfo"><i class="far fa-trash-alt"></i></button>
+                                        <button class="btn btn-danger btn-sm swalDefaultInfo"><i class="far fa-trash-alt"></i></button>
                                        </a>
-                                         <a href="{{Route('menu.edit',$menu->id)}}">
-                                        <button class="btn btn-info btn-sm mr-2"><i class="fas fa-edit"></i></button>
-                                          </a>
+
                                       </td>
                                       </tr>
                                       @endforeach
