@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TableRequest;
 use App\Models\Table;
-use Illuminate\Http\Request;
 
 class TableController extends Controller
 {
@@ -15,7 +15,7 @@ class TableController extends Controller
         return view('admin.table.list', compact('table'));
     }
 
-    public function store(Request $request)
+    public function store(TableRequest $request)
     {
         Table::create(['name' => $request->name]);
         return redirect()->back();

@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title','Category')
+@section('title','Table Control')
 
 @section('content')
 
@@ -10,15 +10,7 @@
         <button class="btn btn-info my-2 btn-sm">
             <i class="fas fa-arrow-circle-left"></i>&nbsp;Back</button>
      </a>
-     @if (session('status'))
 
-     <div class="alert alert-info alert-dismissible">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-
-            {{session('status')}}
-      </div>
-
-     @endif
       <div class="row">
           <div class="col-md-4">
 

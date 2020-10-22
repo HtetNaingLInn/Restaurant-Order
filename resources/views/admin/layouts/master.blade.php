@@ -16,7 +16,7 @@
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light sticky-top">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -40,10 +40,23 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
+            <li class="nav-item">
+                <a href="{{Route('logout')}}" class="nav-link pl-3">&nbsp;
+                    <i class="fas fa-user-alt text-info"></i>
+
+                    </a>
+                  </li>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="far fa-bell text-danger"></i>
+                <i class="far fa-bell text-warning"></i>
 
               </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{Route('logout')}}" class="nav-link pl-3">&nbsp;
+                <i class="fas fa-power-off text-danger"></i>
+                </a>
         </li>
     </ul>
   </nav>
@@ -71,7 +84,7 @@
       </div>
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
+      <nav class="mt-2 ">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
@@ -95,6 +108,45 @@
           </li>
 
         </ul>
+
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+            <li class="nav-item has-treeview menu-open">
+
+              <a href="#" class="nav-link">&nbsp;
+
+                <i class="fas fa-users-cog text-info"></i>&nbsp;
+                <p class="text-info">
+                  User Control
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+
+
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                <a href="{{Route('user.index')}}" class="nav-link">
+
+                    <i class="fas fa-users text-info mr-2 ml-2"></i>&nbsp;
+                    <p>User</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{Route('role.index')}}" class="nav-link">
+
+                        <i class="fas fa-user-shield text-info mr-2 ml-2"></i>&nbsp;
+                        <p>Role</p>
+                      </a>
+                    </li>
+
+              </ul>
+            </li>
+
+          </ul>
+
+
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
 
@@ -127,7 +179,7 @@
               </ul>
             </li>
 
-          </ul>
+        </ul>
 
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
@@ -156,9 +208,15 @@
             </li>
 
           </ul>
-
+<hr>
 
           <ul class="nav nav-pills nav-sidebar flex-column">
+            <li class="nav-item">
+                <a href="{{Route('logout')}}" class="nav-link pl-3">&nbsp;
+                    <i class="fas fa-user-alt text-info"></i>
+                     <p>Profile</p>
+                    </a>
+                  </li>
             <li class="nav-item">
             <a href="{{Route('logout')}}" class="nav-link pl-3">&nbsp;
                 <i class="fas fa-power-off text-danger"></i>
@@ -167,6 +225,9 @@
               </li>
 
             </ul>
+        </ul>
+
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -182,10 +243,10 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
+    <strong>Copyright &copy; 2020 <a href="https://web.facebook.com/?_rdc=1&_rdr">Htet Naing Linn</a>.</strong>
+    Bla Bla Bla
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.0-rc.3
+      <b>Version</b> 0.0.1
     </div>
   </footer>
 
