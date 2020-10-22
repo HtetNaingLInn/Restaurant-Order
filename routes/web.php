@@ -28,4 +28,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin', 'middleware' => 'auth
     Route::get('menu/{id}/delete', 'MenuController@destroy')->name('menu.destroy');
     Route::get('menu/category/{id}', 'MenuController@category')->name('menu.category');
 
+    Route::get('table', 'TableController@index')->name('table.index');
+    Route::post('table', 'TableController@store')->name('table.store');
+    Route::get('table/{id}/delete', 'TableController@destroy')->name('table.destroy');
+
 });

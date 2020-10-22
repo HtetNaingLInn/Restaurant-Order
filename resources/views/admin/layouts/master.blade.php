@@ -23,18 +23,29 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+      <a href="{{Route('dashboard')}}" class="nav-link m-0 text-bold" type="button">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link text-bold">Table</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link text-bold">Orders</a>
+      </li>
+
     </ul>
 
     <!-- SEARCH FORM -->
 
 
     <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="far fa-bell text-danger"></i>
 
+              </a>
+        </li>
+    </ul>
   </nav>
   <!-- /.navbar -->
 
@@ -65,8 +76,8 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt text-info"></i>
+            <a href="#" class="nav-link">&nbsp;
+              <i class="nav-icon fas fa-tachometer-alt text-info pr-3"></i>
               <p class="text-info">
                 Dashboard
                 <i class="right fas fa-angle-left"></i>
@@ -75,8 +86,8 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
               <a href="{{Route('dashboard')}}" class="nav-link">
-                <i class="fas fa-folder-open text-info mr-2 ml-2"></i>&nbsp;
-                  <p>Admin Detail</p>
+                <i class="fas fa-store text-info mr-2 ml-2"></i>&nbsp;
+                  <p>Restaurant</p>
                 </a>
               </li>
 
@@ -86,10 +97,12 @@
         </ul>
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
+
             <li class="nav-item has-treeview menu-open">
 
               <a href="#" class="nav-link">&nbsp;
-                <i class="fas fa-list-alt text-info"></i>&nbsp;
+
+                <i class="fas fa-book-open text-info"></i>&nbsp;
                 <p class="text-info">
                   Menu Control
                   <i class="right fas fa-angle-left"></i>
@@ -115,14 +128,45 @@
             </li>
 
           </ul>
-        <ul class="nav nav-pills nav-sidebar flex-column">
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+            <li class="nav-item has-treeview menu-open">
+
+              <a href="#" class="nav-link">&nbsp;
+                <i class="fas fa-list-alt text-info"></i>&nbsp;
+                <p class="text-info">
+                  Table Control
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+
+
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                <a href="{{Route('table.index')}}" class="nav-link">
+
+                    <i class="fas fa-chair text-info mr-2 ml-2"></i>&nbsp;
+                    <p>Table</p>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+
+
+          <ul class="nav nav-pills nav-sidebar flex-column">
             <li class="nav-item">
             <a href="{{Route('logout')}}" class="nav-link pl-3">&nbsp;
                 <i class="fas fa-power-off text-danger"></i>
                  <p>Logout</p>
                 </a>
               </li>
-        </ul>
+
+            </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
