@@ -64,7 +64,8 @@ class UserController extends Controller
 
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return view('admin.user.show', compact('user'));
     }
 
     public function edit($id)
@@ -111,7 +112,8 @@ class UserController extends Controller
 
     public function destroy($id)
     {
-        //
+        User::find($id)->delete();
+        return redirect('admin/user')->with('status', 'Deleted Complete');
     }
 
     public function role($id)

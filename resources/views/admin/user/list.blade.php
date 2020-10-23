@@ -77,10 +77,10 @@
                                               <div class="row">
                                                 <div class="col-7">
                                                 <h2 class="lead"><b>{{$data->name}}</b></h2>
-                                                  <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                <p class="text-muted text-sm"><b>About: </b> {{$data->user_detail->remark}}</p>
                                                   <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
+                                                  <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: {{$data->user_detail->address}}</li>
+                                                  <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: {{$data->user_detail->phone}}</li>
                                                   </ul>
                                                 </div>
                                                 <div class="col-5 text-center">
