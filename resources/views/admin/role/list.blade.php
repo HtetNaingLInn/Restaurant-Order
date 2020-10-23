@@ -51,7 +51,7 @@
                       <td>{{$data->id}}</td>
                       <td>{{$data->name}}</td>
                       <td>
-                        <a href="{{Route('role.show',$data->id)}}"
+                        <a href="{{Route('user.role',$data->id)}}"
                             type="button"  class="btn btn-secondary btn-sm  ">
                                  <i class="fas fa-user"></i>
                          </a>

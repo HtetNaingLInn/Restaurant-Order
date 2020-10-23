@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin', 'middleware' => 'auth
     Route::get('role', 'RoleController@index')->name('role.index');
     Route::get('role/{id}/edit', 'RoleController@edit')->name('role.edit');
     Route::post('role/{id}', 'RoleController@update')->name('role.update');
-    Route::get('role/{id}/show', 'RoleController@show')->name('role.show');
+
     Route::get('role/{id}/delete', 'RoleController@destroy')->name('role.destroy');
 
     Route::get('user', 'UserController@index')->name('user.index');
