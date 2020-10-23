@@ -86,7 +86,6 @@ class MenuController extends Controller
     {
 
         if (request('search')) {
-            // $menus = Menu::where('name', 'like', '%' . request('search') . '%')->get();
             $category = Category::find($id);
             $menus = $category->menus->where('name', 'like', '%' . request('search') . '%');
         } else {

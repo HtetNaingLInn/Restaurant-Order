@@ -19,6 +19,7 @@ class CreateUserDetailsTable extends Migration
             $table->string('phone')->nullable();
             $table->string('nrc')->nullable();
             $table->integer('age')->nullable();
+
             $table->string('salary')->nullable();
             $table->text('address')->nullable();
             $table->text('remark')->nullable();

@@ -12,4 +12,9 @@ class user_detail extends Model
     use SoftDeletes;
     protected $fillable = ['user_id', 'phone', 'nrc', 'age', 'salary', 'address', 'remark'];
     protected $dates = ['deleted_at'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

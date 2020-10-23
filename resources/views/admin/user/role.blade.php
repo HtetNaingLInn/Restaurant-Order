@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title','User Control')
+@section('title',)
 
 @section('content')
 
@@ -22,7 +22,7 @@
 
 
                 <div class="card-header">
-                    <h3 class="text-danger text-bold card-title">Restaurant's User(Employee) List</h3>
+                <h3 class="text-danger text-bold card-title">{{$role->name}} User</h3>
                 </div>
 
 
@@ -42,7 +42,8 @@
                           Role
                         </button>
                         <div class="dropdown-menu bg-info" aria-labelledby="btnGroupDrop1">
-                            @foreach ($role as $data)
+                            <a class="dropdown-item bg-info" href="{{Route('user.index')}}">All
+                            @foreach ($roles as $data)
                         <a class="dropdown-item bg-info" href="{{Route('user.role',$data->id)}}">
                                 {{$data->name}}
                             </a>

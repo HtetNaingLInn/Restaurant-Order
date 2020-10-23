@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title','Add Item')
+@section('title','Add New User')
 
 @section('content')
 
@@ -23,29 +23,35 @@
                @csrf
 
              <div class="card-body">
-                 <div class="row">
-                     <div class="col-md-6 border-right">
+
+
                         @include('admin.message.error')
-                        <div class="form-group">
+
+                 <div class="row">
+                <div class="col-md-6 border-right">
+                                <div class="form-group">
                           <label for="name">Name</label>
                         <input type="text" class="form-control" placeholder="Enter User Name" name="name" required>
                         </div>
-
-                      <div class="form-group">
-                         <label for="customFile">Custom File</label>
-                         <div class="custom-file">
-                           <input type="file" class="custom-file-input" name="image">
-                           <label class="custom-file-label" for="customFile">Choose file</label>
-                         </div>
-                       </div>
+                        <div class="form-group">
+                            <label for="customFile">Upload Profile</label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" name="image">
+                              <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                          </div>
                        <div class="form-group">
                          <label for="email">Email</label>
                        <input type="email" class="form-control" placeholder="Enter User Email" name="email" required>
                        </div>
                        <div class="form-group">
                          <label for="password">Password</label>
-                       <input type="email" class="form-control" placeholder="Enter User Password" name="password" required>
+                       <input type="password" class="form-control" placeholder="Enter User Password" name="password" required>
                        </div>
+                       <div class="form-group">
+                        <label for="password">Confirm Password</label>
+                      <input type="password" class="form-control" placeholder="Enter User Password again" name="password_confirmation" required>
+                      </div>
 
                        <div class="form-group">
                          <label>Please Select User Role</label>
@@ -56,12 +62,40 @@
                          @endforeach
                          </select>
                        </div>
-                     </div>
-                     <div class="col-md-6">
 
-
-                     </div>
                  </div>
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                  <input type="text" class="form-control" placeholder="Enter Phone Number" name="phone" >
+                                  </div>
+                                <div class="form-group">
+                                    <label>NRC</label>
+                                  <input type="text" class="form-control" placeholder="Enter NRC Number" name="nrc" >
+                                  </div>
+                                  <div class="form-group">
+                                    <label>Age</label>
+                                  <input type="number" class="form-control" placeholder="Enter User Age" name="age">
+                                  </div>
+                                  <div class="form-group">
+                                    <label>Salary</label>
+                                  <input type="number" class="form-control" placeholder="Enter User Salary" name="salary">
+                                  </div>
+                                  <div class="form-group">
+                                    <label>Address</label>
+                                  <input type="text" class="form-control" placeholder="Enter User Address" name="address">
+                                  </div>
+                                  <div class="form-group">
+                                    <label>Remark</label>
+                                    <textarea class="form-control"  rows="2" name="remark" placeholder="Enter Remark"></textarea>
+                                  </div>
+                            </div>
+                        </div>
+
+
+
+
 
 
 
