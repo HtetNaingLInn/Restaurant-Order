@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Table;
 
 class DashController extends Controller
 {
     public function dash()
     {
-        return view('admin.dashboard');
+        $table = Table::all();
+        return view('admin.dashboard', compact('table'));
     }
 }

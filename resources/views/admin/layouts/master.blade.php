@@ -41,7 +41,7 @@
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
             <li class="nav-item">
-                <a href="{{Route('logout')}}" class="nav-link pl-3">&nbsp;
+                <a href="{{Route('user.show',Auth::user()->id)}}" class="nav-link pl-3">&nbsp;
                     <i class="fas fa-user-alt text-info"></i>
 
                     </a>
@@ -212,7 +212,7 @@
 
           <ul class="nav nav-pills nav-sidebar flex-column">
             <li class="nav-item">
-                <a href="{{Route('logout')}}" class="nav-link pl-3">&nbsp;
+                <a href="{{Route('user.show',Auth::user()->id)}}" class="nav-link pl-3">&nbsp;
                     <i class="fas fa-user-alt text-info"></i>
                      <p>Profile</p>
                     </a>

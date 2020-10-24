@@ -41,10 +41,13 @@
                         </div>
                         <div class="card-footer">
                           <div class="text-right">
+                        @if (Auth::user()->role->name== 'admin')
+
 
                         <a href="{{Route('user.destroy',$user->id)}}" class="btn btn-sm btn-outline-danger">
                               <i class="fas fa-trsah"></i> Delete
                             </a>
+                            @endif
                           </div>
                         </div>
                      </div>

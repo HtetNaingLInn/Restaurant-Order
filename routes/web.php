@@ -9,8 +9,6 @@ Route::get('/', function () {
 Auth::routes(['register' => false, 'logout' => false]);
 Route::get('logout', 'auth\LoginController@logout')->name('logout');
 
-Route::get('admin/dashboard', 'admin\DashController@dash')->name('dashboard')->middleware('auth');
-
 Route::group(['prefix' => 'admin', 'namespace' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::get('category', 'CategoryController@index')->name('category.index');
@@ -46,5 +44,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin', 'middleware' => 'auth
     Route::get('user/{id}/delete', 'UserController@destroy')->name('user.destroy');
     Route::get('user/role/{id}', 'UserController@role')->name('user.role');
     Route::get('user/{id}/show', 'UserController@show')->name('user.show');
+
+    Route::get('dashboard', 'DashController@dash')->name('dashboard');
 
 });
