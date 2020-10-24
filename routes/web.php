@@ -47,4 +47,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin', 'middleware' => 'auth
 
     Route::get('dashboard', 'DashController@dash')->name('dashboard');
 
+    // DashBoard Table Order Menus
+
+    Route::get('dashboard/table/{id}', 'DashController@menu')->name('dashboard.menu');
+    Route::get('dashboard/category/{id}/table/{table}', 'DashController@category')->name('dashboard.category');
+
 });

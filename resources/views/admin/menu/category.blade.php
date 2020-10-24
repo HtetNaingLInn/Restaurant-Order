@@ -42,6 +42,9 @@
                           Category
                         </button>
                         <div class="dropdown-menu bg-info" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item bg-info" href="{{Route('menu.index')}}">
+                               All
+                            </a>
                             @foreach ($categories as $data)
                         <a class="dropdown-item bg-info" href="{{Route('menu.category',$data->id)}}">
                                 {{$data->name}}

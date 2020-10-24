@@ -9,7 +9,7 @@
             @foreach ($table as $data)
 
             @if ($data->status == 0)
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3">
 
                 <div class="small-box bg-info">
 
@@ -18,7 +18,7 @@
                     <h4 class=" text-bold">{{$data->name}}</h4>
 
                     </div>
-                    <a href="">
+                 <a href="{{Route('dashboard.menu',$data->id)}}">
                     <div class="text-center icon">
                         <i class="fas fa-plus-circle"></i>
                     </div>
@@ -35,7 +35,7 @@
 
 
 
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-3">
 
         <div class="small-box bg-secondary">
 
